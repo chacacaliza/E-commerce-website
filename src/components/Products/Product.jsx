@@ -4,7 +4,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router'
+import { useParams } from 'react-router-dom'
 import { addCart } from '../../redux/action';
 import "./ProductStyle.css"
 
@@ -24,7 +24,8 @@ const Product = () => {
 
         const getProduct = async () => {
             setLoading(true);
-
+            console.log(id)
+            console.log("id")
             const response = await fetch (`https://631993998e51a64d2be72871.mockapi.io/products/${id}`);
             setProduct(await response.json());
             setLoading(false);
@@ -32,7 +33,8 @@ const Product = () => {
         }
 
         getProduct();
-
+        console.log(product);
+        console.log("product")
     }, [id]);
 
     const Loading = () => {

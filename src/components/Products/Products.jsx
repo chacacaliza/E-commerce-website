@@ -9,7 +9,7 @@ const Products = () => {
     const [filter, setFilter] = useState(data);
     const [loading, setLoading] = useState(false);
 
-    console.log(filter);
+    // console.log(filter);
 
     let componentMounted = true;
 
